@@ -1,10 +1,15 @@
 import './App.css';
+import { Header } from './components/Header';
+import { Display } from './components/Display';
 
 function App() {
   return (
-    <div className='container'>
-      <h1 className='header'>MyWeather</h1>
-    </div>
+    <>
+      <Header />
+      <div className='container'>
+        <Display />
+      </div>
+    </>
   );
 }
 
