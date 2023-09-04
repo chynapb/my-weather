@@ -1,11 +1,12 @@
 import './App.css';
 import { Display } from './components/Display';
 import { Forecast } from './components/Forecast';
+import { Search } from './components/Search';
 
 function App() {
   return (
-    <div className='container'>
-      <h1 className='h1'>MyWeather</h1>
+    <div className='app'>
+      <Search />
       <Display />
       <Forecast />
     </div>
