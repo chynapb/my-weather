@@ -38,18 +38,10 @@ input {
   border: none;
   outline: none;
   background: rgba(255, 255, 255, 0.582);
-  /* width: 350px;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  background: #fff;
-  padding: 10px;
-  color: #3f3f3f;
-  margin: 5px; */
 }
 
 input:hover {
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.781);
   transition: 0.3s;
 }
 
@@ -93,6 +85,11 @@ h4 {
 }
 
 .forecast-img {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.display-img {
+  height: 10rem;
+  width: 10rem;
 }
