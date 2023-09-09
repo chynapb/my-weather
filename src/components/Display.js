@@ -1,14 +1,14 @@
 export const Display = () => {
   return (
-    <div className='display'>
+    <div className='weather-display'>
       <h3>Current Weather</h3>
       <div className='current-weather'>
-        <h1>60°F</h1>
         <img
-          src={'/imgs/sunny.png'}
+          src={'/imgs/partly-cloudy.png'}
           className='display-img'
           alt='weather'
         ></img>
+        <h1>60°F</h1>
       </div>
     </div>
   );
