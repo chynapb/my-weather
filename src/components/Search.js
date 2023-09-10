@@ -1,7 +1,7 @@
 export const Search = () => {
   return (
     <div className='search'>
-      <input id='search-box' type='text' placeholder='Enter your city...' />
+      <input type='text' placeholder='Enter location...' />
     </div>
   );
 };

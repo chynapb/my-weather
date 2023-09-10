@@ -7,6 +7,7 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #505050;
 }
@@ -14,95 +15,84 @@ body {
 .app {
   width: 100%;
   min-height: 100vh;
-  padding: 10px;
-  background: rgb(224, 179, 242);
-  background: linear-gradient(
-    113deg,
-    rgb(153, 240, 175) 0%,
-    rgb(85, 154, 233) 56%,
-    rgb(26, 51, 143) 100%
-  );
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: #fff;
+}
+
+.app:before {
+  content: '';
+  background: url('./assets/background.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .search {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 75px;
+  text-align: center;
+  padding: 1rem;
 }
 
 input {
+  color: #ececec;
   padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 20px;
-  border: none;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.274);
   outline: none;
-  background: rgba(255, 255, 255, 0.582);
+  background: rgba(255, 255, 255, 0.062);
 }
 
 input:hover {
-  background: rgba(255, 255, 255, 0.781);
+  background: rgba(255, 255, 255, 0.151);
   transition: 0.3s;
 }
 
-.weather-display {
-  display: flex;
-  position: relative;
-  width: 100%;
-  max-width: 650px;
-  height: 300px;
-  background: #ffffff;
-  margin: 75px auto 20px;
-  padding: 40px 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.199);
-}
-
-.current-weather {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.forecast-display {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  max-width: 650px;
-  height: 150px;
-  background: #ffffff;
-  margin: 30px auto 20px;
-  padding: 40px 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.199);
-}
-
-h1 {
-  color: #2c2c2c;
-  font-size: 3rem;
-}
-
-h3,
-h4 {
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  padding: 5px;
-}
-
-p {
+::placeholder {
+  color: #b9b9b9;
   font-size: 1rem;
 }
 
-.forecast-img {
-  height: 4rem;
-  width: 4rem;
+.container {
+  max-width: 800px;
+  height: 800px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.display-img {
-  height: 10rem;
-  width: 10rem;
+.current {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 3rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.city > p {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 5rem;
 }
