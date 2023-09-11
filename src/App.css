@@ -68,10 +68,11 @@ input:hover {
 }
 
 .current {
+  display: flex;
   margin: 1rem auto;
-  width: 100%;
+  width: 70%;
   margin: 1rem auto;
-  padding: 3rem;
+  padding: 4.5rem;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.404);
 }
@@ -89,6 +90,19 @@ input:hover {
 
 .city > p {
   font-size: 1.7rem;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 2rem;
 }
 
 p {
