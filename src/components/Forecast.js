@@ -1,36 +1,37 @@
-export const Forecast = () => {
+import moment from 'moment';
+
+export const Forecast = ({ data }) => {
   return (
-    <div className='forecast'>
-      <di>
-        <h3>Sat</h3>
-        <img src={'/imgs/sunny.png'} alt='' />
-        <p>Sunny</p>
-        <p>60°F</p>
-      </di>
-      <di>
-        <h3>Sun</h3>
-        <img src={'/imgs/rain.png'} alt='' />
-        <p>Rain</p>
-        <p>70°F</p>
-      </di>
-      <di>
-        <h3>Mon</h3>
-        <img src={'/imgs/rain.png'} alt='' />
-        <p>Rain</p>
-        <p>67°F</p>
-      </di>
-      <di>
-        <h3>Tue</h3>
-        <img src={'/imgs/cloudy.png'} alt='' />
-        <p>Cloudy</p>
-        <p>75°F</p>
-      </di>
-      <div>
-        <h3>Wed</h3>
-        <img src={'/imgs/sunny.png'} alt='' />
-        <p>Sunny</p>
-        <p>87°F</p>
-      </div>
-    </div>
+    <>
+      {data.current && (
+        <div className='forecast'>
+          <div>
+            <h4>{moment(data.forecast.forecastday[1].date).format('ddd')}</h4>
+            <img src={'/imgs/sunny.png'} alt='' />
+            <p>{Math.round(data.forecast.forecastday[1].day.avgtemp_f)}°F</p>
+          </div>
+          <div>
+            <h4>{moment(data.forecast.forecastday[2].date).format('ddd')}</h4>
+            <img src={'/imgs/rain.png'} alt='' />
+            <p>{Math.round(data.forecast.forecastday[2].day.avgtemp_f)}°F</p>
+          </div>
+          <div>
+            <h4>{moment(data.forecast.forecastday[3].date).format('ddd')}</h4>
+            <img src={'/imgs/rain.png'} alt='' />
+            <p>{Math.round(data.forecast.forecastday[3].day.avgtemp_f)}°F</p>
+          </div>
+          <div>
+            <h4>{moment(data.forecast.forecastday[4].date).format('ddd')}</h4>
+            <img src={'/imgs/cloudy.png'} alt='' />
+            <p>{Math.round(data.forecast.forecastday[4].day.avgtemp_f)}°F</p>
+          </div>
+          <div>
+            <h4>{moment(data.forecast.forecastday[5].date).format('ddd')}</h4>
+            <img src={'/imgs/sunny.png'} alt='' />
+            <p>{Math.round(data.forecast.forecastday[5].day.avgtemp_f)}°F</p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };

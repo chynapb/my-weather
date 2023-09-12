@@ -47,18 +47,18 @@ input {
 }
 
 input:hover {
-  background: rgba(255, 255, 255, 0.151);
+  background: rgba(255, 255, 255, 0.25);
   transition: 0.3s;
 }
 
 ::placeholder {
-  color: #b9b9b9;
+  color: #c7c7c7;
   font-size: 1rem;
 }
 
 .container {
-  max-width: 800px;
-  height: 800px;
+  max-width: 650px;
+  height: 650px;
   margin: auto;
   padding: 0 1rem;
   position: relative;
@@ -67,14 +67,19 @@ input:hover {
   justify-content: space-around;
 }
 
+.welcome > p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+
 .current {
   display: flex;
-  margin: 1rem auto;
-  width: 70%;
-  margin: 1rem auto;
+  width: 100%;
+  margin: 100px auto;
   padding: 4.5rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .forecast {
@@ -82,14 +87,27 @@ input:hover {
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 1rem auto;
+  margin: auto;
   padding: 1rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.city > p {
-  font-size: 1.7rem;
+.days {
+  padding-bottom: 5px;
+}
+
+.city {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+
+.condition {
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .left {
@@ -102,18 +120,24 @@ input:hover {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  line-height: 2rem;
+  line-height: 3rem;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 p {
   font-size: 1.1rem;
 }
 
-h1 {
-  font-size: 5rem;
+.current-img {
+  height: 6rem;
+  width: 6rem;
 }
 
 img {
+  padding: 3px;
   height: 3rem;
   width: 3rem;
 }
