@@ -1,6 +1,8 @@
 import './App.css';
-import { useState } from 'react';
 import axios from 'axios';
+import moment from 'moment';
+import iconsArr from './data/icons';
+import { useState } from 'react';
 import { Current } from './components/Current';
 import { Forecast } from './components/Forecast';
 
@@ -20,6 +22,11 @@ function App() {
     }
   };
 
+  const getIcon = () => {
+    const currentCondition = data.current.condition.text;
+    const timeOfDay = moment(data.location.localtime).format('LT');
+  };
+
   return (
     <div className='app'>
       <div className='search'>
@@ -32,8 +39,8 @@ function App() {
         />
       </div>
       <div className='container'>
-        <Current data={data} />
-        <Forecast data={data} />
+        <Current data={data} getIcon={getIcon} />
+        <Forecast data={data} getIcon={getIcon} />
       </div>
     </div>
   );
