@@ -1,5 +1,6 @@
 export const Current = ({ data }) => {
   return (
+    // Display weather info when city entered
     <>
       {data.current ? (
         <div className='current'>
@@ -50,6 +51,7 @@ export const Current = ({ data }) => {
           </div>
         </div>
       ) : (
+        // Display welcome message if no city is typed
         <div className='welcome'>
           <p>
             Welcome to MyWeather!

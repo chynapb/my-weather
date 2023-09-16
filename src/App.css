@@ -39,7 +39,7 @@ body {
 input {
   color: #ececec;
   padding: 0.7rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.274);
   outline: none;
@@ -125,6 +125,13 @@ input:hover {
 
 h1 {
   font-size: 3.5rem;
+}
+
+.error {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  white-space: pre-line;
 }
 
 p {
