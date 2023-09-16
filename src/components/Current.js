@@ -12,6 +12,11 @@ export const Current = ({ data }) => {
             </div>
             <div>
               <h1>{Math.round(data.current.temp_f)}°F</h1>
+              <img
+                src={data.current.condition.icon}
+                alt='Current'
+                className='current-img'
+              />
             </div>
             <div>
               <p className='condition'>{data.current.condition.text}</p>

@@ -57,8 +57,8 @@ input:hover {
 }
 
 .container {
-  max-width: 650px;
-  height: 650px;
+  max-width: 675px;
+  height: 675px;
   margin: auto;
   padding: 0 1rem;
   position: relative;
@@ -103,7 +103,7 @@ input:hover {
 }
 
 .condition {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .bold {
@@ -138,12 +138,7 @@ p {
   font-size: 1.1rem;
 }
 
-.current-img {
-  height: 6rem;
-  width: 6rem;
-}
-
-img {
+.forecast-img {
   padding: 3px;
   height: 3rem;
   width: 3rem;

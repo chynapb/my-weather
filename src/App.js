@@ -17,8 +17,8 @@ function App() {
       axios
         .get(url)
         .then((response) => {
-          setData(response.data);
           console.log(response.data);
+          setData(response.data);
         })
         .catch((error) => {
           if (error) {
@@ -29,11 +29,6 @@ function App() {
       setErrorMsg('');
     }
   };
-
-  // const getIcon = () => {
-  //   const currentCondition = data.current.condition.text;
-  //   const timeOfDay = moment(data.location.localtime).format('LT');
-  // };
 
   return (
     <div className='app'>
