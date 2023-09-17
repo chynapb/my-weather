@@ -1,6 +1,5 @@
 import './App.css';
 import axios from 'axios';
-import moment from 'moment';
 import { useState } from 'react';
 import { Current } from './components/Current';
 import { Forecast } from './components/Forecast';

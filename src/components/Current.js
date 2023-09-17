@@ -1,3 +1,5 @@
+import moment from 'moment/moment';
+
 export const Current = ({ data }) => {
   return (
     // Display weather info when city entered
@@ -20,6 +22,11 @@ export const Current = ({ data }) => {
             </div>
             <div>
               <p className='condition'>{data.current.condition.text}</p>
+            </div>
+            <div>
+              <p className='date'>
+                {moment(data.location.localtime).format('LLL')}
+              </p>
             </div>
           </div>
           <div className='right'>

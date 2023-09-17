@@ -57,8 +57,8 @@ input:hover {
 }
 
 .container {
-  max-width: 675px;
-  height: 675px;
+  max-width: 700px;
+  height: 700px;
   margin: auto;
   padding: 0 1rem;
   position: relative;
@@ -104,6 +104,11 @@ input:hover {
 
 .condition {
   font-size: 1.4rem;
+  padding-bottom: 5px;
+}
+
+.date {
+  padding-top: 5px;
 }
 
 .bold {
