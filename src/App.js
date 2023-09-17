@@ -19,17 +19,17 @@ function App() {
       axios
         .get(url)
         .then((response) => {
-          console.log(response.data);
           setData(response.data);
+          setIsLoading(false);
         })
         .catch((error) => {
           if (error) {
+            setIsLoading(false);
             setErrorMsg('Oops! Something went wrong.\n Please try again.');
           }
         });
       setCity('');
       setErrorMsg('');
-      setIsLoading(false);
     }
   };
 
