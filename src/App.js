@@ -1,5 +1,6 @@
 import './App.css';
 import axios from 'axios';
+import { TailSpin } from 'svg-loaders-react';
 import { useState } from 'react';
 import { Current } from './components/Current';
 import { Forecast } from './components/Forecast';
@@ -8,11 +9,13 @@ function App() {
   const [data, setData] = useState({});
   const [city, setCity] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const url = `http://api.weatherapi.com/v1/forecast.json?key=67e40025d62146e9afa123331231009&q=${city}&days=6&aqi=no&alerts=no`;
 
   const getWeather = (event) => {
     if (event.key === 'Enter') {
+      setIsLoading(true);
       axios
         .get(url)
         .then((response) => {
@@ -26,6 +29,7 @@ function App() {
         });
       setCity('');
       setErrorMsg('');
+      setIsLoading(false);
     }
   };
 
@@ -41,13 +45,26 @@ function App() {
         />
       </div>
       <div className='container'>
-        {!errorMsg ? (
-          <>
-            <Current data={data} />
-            <Forecast data={data} />
-          </>
+        {isLoading ? (
+          <TailSpin
+            style={{
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
         ) : (
-          <p className='error'>{errorMsg}</p>
+          <>
+            {!errorMsg ? (
+              <>
+                <Current data={data} />
+                <Forecast data={data} />
+              </>
+            ) : (
+              <p className='error'>{errorMsg}</p>
+            )}
+          </>
         )}
       </div>
     </div>

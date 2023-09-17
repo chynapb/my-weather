@@ -13,7 +13,7 @@ export const Current = ({ data }) => {
               </p>
             </div>
             <div>
-              <h1>{Math.round(data.current.temp_f)}°F</h1>
+              <h1>{Math.floor(data.current.temp_f)}°F</h1>
               <img
                 src={data.current.condition.icon}
                 alt='Current'
@@ -33,31 +33,31 @@ export const Current = ({ data }) => {
             <div>
               <p>
                 <span className='bold'>High: </span>
-                {Math.round(data.forecast.forecastday[0].day.maxtemp_f)}°F
+                {Math.floor(data.forecast.forecastday[0].day.maxtemp_f)}°F
               </p>
             </div>
             <div>
               <p>
                 <span className='bold'>Low: </span>{' '}
-                {Math.round(data.forecast.forecastday[0].day.mintemp_f)}°F
+                {Math.floor(data.forecast.forecastday[0].day.mintemp_f)}°F
               </p>
             </div>
             <div>
               <p>
                 <span className='bold'>Feels Like: </span>{' '}
-                {Math.round(data.current.feelslike_f)}°F
+                {Math.floor(data.current.feelslike_f)}°F
               </p>
             </div>
             <div>
               <p>
                 <span className='bold'>Humidity: </span>{' '}
-                {Math.round(data.current.humidity)}%
+                {Math.floor(data.current.humidity)}%
               </p>
             </div>
             <div>
               <p>
                 <span className='bold'>Wind: </span>{' '}
-                {Math.round(data.current.wind_mph)} MPH
+                {Math.floor(data.current.wind_mph)} MPH
               </p>
             </div>
           </div>
