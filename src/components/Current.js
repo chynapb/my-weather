@@ -66,7 +66,7 @@ export const Current = ({ data }) => {
         // Display welcome message if no city is typed
         <div className='welcome'>
           <p>
-            Welcome to MyWeather!
+            Welcome to My Weather!
             <br />
             Enter a location to get started.
           </p>

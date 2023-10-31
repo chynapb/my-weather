@@ -18,6 +18,7 @@ body {
   position: relative;
   background-color: rgba(0, 0, 0, 0.452);
   color: #fff;
+  padding-bottom: 50px;
 }
 
 .app:before {
