@@ -11,8 +11,8 @@ function App() {
   const [errorMsg, setErrorMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const apiKey = process.env.REACT_APP_API_KEY;
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=6&aqi=no&alerts=no`;
+  const key = process.env.REACT_APP_API_KEY;
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=6&aqi=no&alerts=no`;
 
   const getWeather = (event) => {
     if (event.key === 'Enter') {
