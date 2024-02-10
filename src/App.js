@@ -14,8 +14,8 @@ function App() {
   const key = process.env.REACT_APP_API_KEY;
   const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=6&aqi=no&alerts=no`;
 
-  const getWeather = (event) => {
-    if (event.key === 'Enter') {
+  const getWeather = (e) => {
+    if (e.key === 'Enter') {
       setIsLoading(true);
       axios
         .get(url)
@@ -42,7 +42,7 @@ function App() {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           onKeyDown={getWeather}
-          placeholder='Enter location...'
+          placeholder='Enter a city or zip code...'
         />
       </div>
       <div className='container'>

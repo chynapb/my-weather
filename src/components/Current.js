@@ -63,12 +63,12 @@ export const Current = ({ data }) => {
           </div>
         </div>
       ) : (
-        // Display welcome message if no city is typed
+        // Display welcome message if no user input
         <div className='welcome'>
           <p>
             Welcome to My Weather!
             <br />
-            Enter a location to get started.
+            Search any city to get started.
           </p>
         </div>
       )}
