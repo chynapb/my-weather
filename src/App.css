@@ -7,7 +7,6 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #505050;
 }
@@ -32,12 +31,25 @@ body {
   z-index: -1;
 }
 
+.container {
+  max-width: 700px;
+  height: 700px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Loading spinner */
 .spinner {
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+/* Search */
 .search {
   text-align: center;
   padding: 1rem;
@@ -63,17 +75,7 @@ input:hover {
   font-size: 1rem;
 }
 
-.container {
-  max-width: 700px;
-  height: 700px;
-  margin: auto;
-  padding: 0 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
+/* Welcome page */
 .welcome > p {
   font-size: 1.5rem;
   text-align: center;
