@@ -12,7 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const key = process.env.REACT_APP_API_KEY;
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=6&aqi=no&alerts=no`;
+  const url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=6&aqi=no&alerts=no`;
 
   const getWeather = (e) => {
     if (e.key === 'Enter') {
