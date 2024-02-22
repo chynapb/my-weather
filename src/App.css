@@ -85,7 +85,7 @@ input:hover {
 .current {
   display: flex;
   width: 100%;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 4.5rem;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -156,4 +156,25 @@ p {
   padding: 3px;
   height: 3rem;
   width: 3rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .current {
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .city,
+  .condition {
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .right {
+    display: none;
+  }
 }
